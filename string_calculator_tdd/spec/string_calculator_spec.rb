@@ -39,5 +39,9 @@ RSpec.describe StringCalculator do
     it "supports semicolon as custom delimiter" do
       expect(StringCalculator.add("//;\n1;2")).to eq(3)
     end
+
+    it "supports pipe | as custom delimiter" do
+      expect(StringCalculator.add("//|\n1|2|3")).to eq(6)
+    end
   end
 end
