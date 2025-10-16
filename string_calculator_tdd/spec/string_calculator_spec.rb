@@ -30,5 +30,8 @@ RSpec.describe StringCalculator do
     it "returns correct sum" do
       expect(StringCalculator.add("\n2;3")).to eq(5)
     end
+    it "returns correct sum" do
+      expect(StringCalculator.add("\n2;3;6,19")).to eq(30)
+    end
   end
 end
