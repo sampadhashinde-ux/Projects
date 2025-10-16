@@ -43,5 +43,9 @@ RSpec.describe StringCalculator do
     it "supports pipe | as custom delimiter" do
       expect(StringCalculator.add("//|\n1|2|3")).to eq(6)
     end
+
+    it "supports delimiter of multiple characters like *** " do
+      expect(StringCalculator.add("//***\n1***2***3")).to eq(6)
+    end
   end
 end
