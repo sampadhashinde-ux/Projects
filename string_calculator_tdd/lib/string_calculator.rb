@@ -4,7 +4,7 @@ class StringCalculator
     output = if input_string.empty?
                0
              else
-               delimiters = [",", "\n"]
+               delimiters = [",", "\n", ";"]
                input_string.split(Regexp.union(delimiters)).map(&:to_i).sum
              end
     puts "output value => #{output.to_i}"
