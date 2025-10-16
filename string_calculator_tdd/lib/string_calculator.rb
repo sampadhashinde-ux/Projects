@@ -9,7 +9,11 @@ class StringCalculator
                  delimiter_section, input_string = input_string.split("\n", 2)
                  delimiters += parse_delimiters(delimiter_section)
                end
-               input_string.split(Regexp.union(delimiters.uniq)).map(&:to_i).sum
+               extracted_numbers = input_string.split(Regexp.union(delimiters.uniq)).map(&:to_i)
+               negatives = extracted_numbers.select { |n| n < 0 }
+               raise "negative numbers not allowed: #{negatives.join(', ')}" unless negatives.empty?
+
+               extracted_numbers.sum
              end
     puts "output value => #{output.to_i}"
     return output.to_i
