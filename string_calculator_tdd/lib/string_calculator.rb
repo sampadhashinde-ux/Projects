@@ -1,6 +1,6 @@
 class StringCalculator
   def self.add(input_string)
-    puts "input string => #{input_string}"
+    # puts "input string => #{input_string}"
     output = if input_string.empty?
                0
              else
@@ -15,7 +15,7 @@ class StringCalculator
 
                extracted_numbers.sum
              end
-    puts "output value => #{output.to_i}"
+    # puts "output value => #{output.to_i}"
     return output.to_i
   end
 
