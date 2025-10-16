@@ -16,4 +16,11 @@ RSpec.describe StringCalculator do
   it "returns sum of all numbers" do
     expect(StringCalculator.add("1,5,10,24")).to eq(40)
   end
+
+  context "when input contains newline as delimiter" do
+    it "returns correct sum" do
+      expect(StringCalculator.add("1\n2,3")).to eq(6)
+    end
+  end
+
 end
