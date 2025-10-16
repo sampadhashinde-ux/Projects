@@ -34,4 +34,10 @@ RSpec.describe StringCalculator do
       expect(StringCalculator.add("\n2;3;6,19")).to eq(30)
     end
   end
+
+  context "when custom delimiter is given eg. input is like `//[delimiter]\n[numbers…]`" do
+    it "supports semicolon as custom delimiter" do
+      expect(StringCalculator.add("//;\n1;2")).to eq(3)
+    end
+  end
 end
