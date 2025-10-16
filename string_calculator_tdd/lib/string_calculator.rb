@@ -1,6 +1,12 @@
 class StringCalculator
   def self.add(input_string)
     puts "input string => #{input_string}"
-    return 0 if input_string.empty?
+    output = if input_string.empty?
+               0
+             else
+               input_string.to_i
+             end
+    puts "output value => #{output.to_i}"
+    return output.to_i
   end
 end
