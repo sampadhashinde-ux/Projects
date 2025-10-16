@@ -21,6 +21,9 @@ RSpec.describe StringCalculator do
     it "returns correct sum" do
       expect(StringCalculator.add("1\n2,3")).to eq(6)
     end
-  end
+    it "returns correct sum" do
+      expect(StringCalculator.add("1\n2\n10")).to eq(13)
+    end
 
+  end
 end
